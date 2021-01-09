@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'cbdLocks.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': BASE_DIR / 'cbddb',
+        'NAME': 'cbddb',
         'USER':'postgres',
         'PASSWORD':'kikepwns3626',
         'HOST':'localhost',
