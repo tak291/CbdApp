@@ -8,6 +8,5 @@ class Login(models.Model):
 
 
 
-#If I want this I need to push it.
+#And now it's gone.
    
-    
