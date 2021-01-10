@@ -6,3 +6,4 @@ class Login(models.Model):
     user = models.CharField(max_length=200)
     password = models.CharField(max_length=20)
     
+    #This is a test
