@@ -14,10 +14,11 @@
     {%for job in jobs.all %}
     <div class="container">
 
-     
+      <img class="img-fluid" src="{{job.image.url}}" height="200" width="200">
 
       <p>
        <h1> {{job.summary}}</h1>
+       <h2>{{job.summary}}</h2>
       </p>
 
     </div>
