@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+</head>
+<body>
+    <div class="container">
+    <h1>Imported tthe alljobs</h1>
+    <hr>
+    {%for job in jobs.all %}
+    <div class="container">
+
+     
+
+      <p>
+       <h1> {{job.summary}}</h1>
+      </p>
+
+    </div>
+    {% endfor %}
+</body>
+</html>
