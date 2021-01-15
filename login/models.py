@@ -13,14 +13,17 @@ class Customer(models.Model):
     lastName = models.CharField(max_length=200)
 
 
+class Worker(models.Model):
+    name = models.CharField(max_length=200)
+    lastName = models.CharField(max_length=200)
+
 class Job(models.Model):
+    jobid = models.AutoField(primary_key=True)
     status = models.CharField(max_length=200)
     Customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
     Worker = models.ForeignKey(Worker, on_delete=models.CASCADE)
 
-class Worker(models.Model):
-    name = models.CharField(max_length=200)
-    lastName = models.CharField(max_length=200)
+
 
 
 
