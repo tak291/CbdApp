@@ -8,9 +8,14 @@ class Login(models.Model):
     password = models.CharField(max_length=20)
     phone_number = PhoneNumberField(max_length=10, default='')
 
-class Person(models.Model):
+class Customer(models.Model):
     name = models.CharField(max_length=200)
     lastName = models.CharField(max_length=200)
+
+
+class Job(models.Model):
+    Customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
+    
 
 
 
