@@ -14,8 +14,14 @@ class Customer(models.Model):
 
 
 class Job(models.Model):
+    status = models.CharField(max_length=200)
     Customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
-    
+    Worker = models.ForeignKey(Worker, on_delete=models.CASCADE)
+
+class Worker(models.Model):
+    name = models.CharField(max_length=200)
+    lastName = models.CharField(max_length=200)
+
 
 
 
