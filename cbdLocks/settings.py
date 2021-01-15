@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'jobs.apps.JobsConfig',
     'login.apps.LoginConfig',
+    'phonenumber_field',
 ]
 
 MIDDLEWARE = [
@@ -82,7 +83,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'cbddb',
         'USER':'postgres',
-        'PASSWORD':'#######',
+        'PASSWORD':'test123',
         'HOST':'localhost',
         'PORT': '5432',
     }
