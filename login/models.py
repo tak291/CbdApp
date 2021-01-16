@@ -19,19 +19,18 @@ class Worker(models.Model):
 
 class Job(models.Model):
 
-    1 = OPEN
-    2 = PENDING_APPOINTMENT
-    3 = CLOSED
+    OPEN = 1
+    PENDING_APPOINTMENT =  2 
+    CLOSED = 3
 
-    status_choice = (
+    STATUS_CHOICE = (
         (OPEN, '    open'),
         (PENDING_APPOINTMENT, 'pending'),
         ( CLOSED, 'closed' ),
         )
 
-    jobid = models.AutoField(primary_key=True)
-    status = models.IntegerField(default=1)
-    Customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
+    status = models.IntegerField(choices=STATUS_CHOICE,default=1)
+    customer = models.CharField(max_length=200,default=1)
     Worker = models.ForeignKey(Worker, on_delete=models.CASCADE)
 
 
